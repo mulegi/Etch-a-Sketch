@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: arial, sans-serif;
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #333;
+}
+
+.grid-cell {
+    flex: 1 0 calc(100% / 16);
+    height: calc(100% / 16);
+    border: 1px solid #070606;
+    box-sizing: border-box;
+    background-color: grey;
+}
