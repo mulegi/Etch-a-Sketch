@@ -1,25 +1,50 @@
 body {
+    font-family: sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-    font-family: arial, sans-serif;
+}
+
+#button-container {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 #grid-container {
+    width: 1000px;
+    height: 1000px;
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
     border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
-.grid-cell {
-    flex: 1 0 calc(100% / 16);
-    height: calc(100% / 16);
-    border: 1px solid #070606;
+.grid-square {
+    background-color: #eee;
     box-sizing: border-box;
-    background-color: grey;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.grid-square.hovered {
+    background-color: #333;
 }
